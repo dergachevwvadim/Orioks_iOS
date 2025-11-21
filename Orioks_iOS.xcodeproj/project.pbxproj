@@ -24,18 +24,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE04CAA42ED05B2E00DCD32D /* Orioks-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Orioks-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE04CABA2ED05B3000DCD32D /* Orioks-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orioks-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE04CAC42ED05B3000DCD32D /* Orioks-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orioks-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04CAA42ED05B2E00DCD32D /* Orioks_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orioks_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04CABA2ED05B3000DCD32D /* Orioks_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Orioks_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE04CAC42ED05B3000DCD32D /* Orioks_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Orioks_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CE04CACC2ED05B3000DCD32D /* Exceptions for "Orioks-iOS" folder in "Orioks-iOS" target */ = {
+		CE04CACC2ED05B3000DCD32D /* Exceptions for "Orioks-iOS" folder in "Orioks_iOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = CE04CAA32ED05B2E00DCD32D /* Orioks-iOS */;
+			target = CE04CAA32ED05B2E00DCD32D /* Orioks_iOS */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -43,7 +43,7 @@
 		CE04CAA62ED05B2E00DCD32D /* Orioks-iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				CE04CACC2ED05B3000DCD32D /* Exceptions for "Orioks-iOS" folder in "Orioks-iOS" target */,
+				CE04CACC2ED05B3000DCD32D /* Exceptions for "Orioks-iOS" folder in "Orioks_iOS" target */,
 			);
 			path = "Orioks-iOS";
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		CE04CAA52ED05B2E00DCD32D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE04CAA42ED05B2E00DCD32D /* Orioks-iOS.app */,
-				CE04CABA2ED05B3000DCD32D /* Orioks-iOSTests.xctest */,
-				CE04CAC42ED05B3000DCD32D /* Orioks-iOSUITests.xctest */,
+				CE04CAA42ED05B2E00DCD32D /* Orioks_iOS.app */,
+				CE04CABA2ED05B3000DCD32D /* Orioks_iOSTests.xctest */,
+				CE04CAC42ED05B3000DCD32D /* Orioks_iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE04CAA32ED05B2E00DCD32D /* Orioks-iOS */ = {
+		CE04CAA32ED05B2E00DCD32D /* Orioks_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE04CACD2ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOS" */;
+			buildConfigurationList = CE04CACD2ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOS" */;
 			buildPhases = (
 				CE04CAA02ED05B2E00DCD32D /* Sources */,
 				CE04CAA12ED05B2E00DCD32D /* Frameworks */,
@@ -123,16 +123,16 @@
 			fileSystemSynchronizedGroups = (
 				CE04CAA62ED05B2E00DCD32D /* Orioks-iOS */,
 			);
-			name = "Orioks-iOS";
+			name = Orioks_iOS;
 			packageProductDependencies = (
 			);
 			productName = "Orioks-iOS";
-			productReference = CE04CAA42ED05B2E00DCD32D /* Orioks-iOS.app */;
+			productReference = CE04CAA42ED05B2E00DCD32D /* Orioks_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE04CAB92ED05B3000DCD32D /* Orioks-iOSTests */ = {
+		CE04CAB92ED05B3000DCD32D /* Orioks_iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE04CAD22ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOSTests" */;
+			buildConfigurationList = CE04CAD22ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOSTests" */;
 			buildPhases = (
 				CE04CAB62ED05B3000DCD32D /* Sources */,
 				CE04CAB72ED05B3000DCD32D /* Frameworks */,
@@ -146,16 +146,16 @@
 			fileSystemSynchronizedGroups = (
 				CE04CABD2ED05B3000DCD32D /* Orioks-iOSTests */,
 			);
-			name = "Orioks-iOSTests";
+			name = Orioks_iOSTests;
 			packageProductDependencies = (
 			);
 			productName = "Orioks-iOSTests";
-			productReference = CE04CABA2ED05B3000DCD32D /* Orioks-iOSTests.xctest */;
+			productReference = CE04CABA2ED05B3000DCD32D /* Orioks_iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CE04CAC32ED05B3000DCD32D /* Orioks-iOSUITests */ = {
+		CE04CAC32ED05B3000DCD32D /* Orioks_iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE04CAD52ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOSUITests" */;
+			buildConfigurationList = CE04CAD52ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOSUITests" */;
 			buildPhases = (
 				CE04CAC02ED05B3000DCD32D /* Sources */,
 				CE04CAC12ED05B3000DCD32D /* Frameworks */,
@@ -169,11 +169,11 @@
 			fileSystemSynchronizedGroups = (
 				CE04CAC72ED05B3000DCD32D /* Orioks-iOSUITests */,
 			);
-			name = "Orioks-iOSUITests";
+			name = Orioks_iOSUITests;
 			packageProductDependencies = (
 			);
 			productName = "Orioks-iOSUITests";
-			productReference = CE04CAC42ED05B3000DCD32D /* Orioks-iOSUITests.xctest */;
+			productReference = CE04CAC42ED05B3000DCD32D /* Orioks_iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE04CA9F2ED05B2E00DCD32D /* Build configuration list for PBXProject "Orioks-iOS" */;
+			buildConfigurationList = CE04CA9F2ED05B2E00DCD32D /* Build configuration list for PBXProject "Orioks_iOS" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -213,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE04CAA32ED05B2E00DCD32D /* Orioks-iOS */,
-				CE04CAB92ED05B3000DCD32D /* Orioks-iOSTests */,
-				CE04CAC32ED05B3000DCD32D /* Orioks-iOSUITests */,
+				CE04CAA32ED05B2E00DCD32D /* Orioks_iOS */,
+				CE04CAB92ED05B3000DCD32D /* Orioks_iOSTests */,
+				CE04CAC32ED05B3000DCD32D /* Orioks_iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		CE04CABC2ED05B3000DCD32D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE04CAA32ED05B2E00DCD32D /* Orioks-iOS */;
+			target = CE04CAA32ED05B2E00DCD32D /* Orioks_iOS */;
 			targetProxy = CE04CABB2ED05B3000DCD32D /* PBXContainerItemProxy */;
 		};
 		CE04CAC62ED05B3000DCD32D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE04CAA32ED05B2E00DCD32D /* Orioks-iOS */;
+			target = CE04CAA32ED05B2E00DCD32D /* Orioks_iOS */;
 			targetProxy = CE04CAC52ED05B3000DCD32D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -297,6 +297,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,9 +305,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "miet.Orioks-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,9 +336,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "miet.Orioks-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -474,7 +480,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orioks-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orioks-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orioks_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orioks_iOS";
 			};
 			name = Debug;
 		};
@@ -493,7 +499,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orioks-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orioks-iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orioks_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orioks_iOS";
 			};
 			name = Release;
 		};
@@ -534,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE04CA9F2ED05B2E00DCD32D /* Build configuration list for PBXProject "Orioks-iOS" */ = {
+		CE04CA9F2ED05B2E00DCD32D /* Build configuration list for PBXProject "Orioks_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE04CAD02ED05B3000DCD32D /* Debug */,
@@ -543,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE04CACD2ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOS" */ = {
+		CE04CACD2ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE04CACE2ED05B3000DCD32D /* Debug */,
@@ -552,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE04CAD22ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOSTests" */ = {
+		CE04CAD22ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE04CAD32ED05B3000DCD32D /* Debug */,
@@ -561,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE04CAD52ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks-iOSUITests" */ = {
+		CE04CAD52ED05B3000DCD32D /* Build configuration list for PBXNativeTarget "Orioks_iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE04CAD62ED05B3000DCD32D /* Debug */,
