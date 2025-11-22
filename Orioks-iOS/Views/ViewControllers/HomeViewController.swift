@@ -11,6 +11,8 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
+    private var router: Router?
+    private var dropdownMenuView: DropdownMenuView!
     
     // MARK: - UI Elements
     private let headerView: UIView = {
@@ -98,11 +100,31 @@ final class HomeViewController: UIViewController {
         setupConstraints()
         setupTableView()
         bindViewModel()
+        setupDropdownMenu()
         
         viewModel.loadData()
     }
     
     // MARK: - Setup
+    private func setupDropdownMenu() {
+        dropdownMenuView = DropdownMenuView()
+        dropdownMenuView.delegate = self
+        dropdownMenuView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Добавляем поверх всего
+        view.addSubview(dropdownMenuView)
+        
+        NSLayoutConstraint.activate([
+            dropdownMenuView.topAnchor.constraint(equalTo: view.topAnchor),
+            dropdownMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dropdownMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            dropdownMenuView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        
+        view.bringSubviewToFront(dropdownMenuView)
+    }
+    
+    
     private func setupNavigation() {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -149,12 +171,6 @@ final class HomeViewController: UIViewController {
         button.setTitleColor(UIColor(red: 0.29, green: 0.56, blue: 0.71, alpha: 1.0), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        if let iconName = item.icon {
-            let icon = UIImage(systemName: iconName)
-            button.setImage(icon, for: .normal)
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
-        }
-        
         containerView.addSubview(button)
         
         NSLayoutConstraint.activate([
@@ -162,7 +178,7 @@ final class HomeViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             button.topAnchor.constraint(equalTo: containerView.topAnchor),
             button.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            button.heightAnchor.constraint(equalToConstant: 44)
+            button.heightAnchor.constraint(equalToConstant: 20)
         ])
         
         return containerView
@@ -212,7 +228,7 @@ final class HomeViewController: UIViewController {
             bannerLabel.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: -16),
             
             // Quick Links
-            quickLinksStackView.topAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: 24),
+            quickLinksStackView.topAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: 16),
             quickLinksStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             quickLinksStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
@@ -261,14 +277,8 @@ final class HomeViewController: UIViewController {
     @objc private func menuButtonTapped() {
         print("Menu button tapped")
         // TODO: Показать боковое меню или action sheet
-        showMenuOptions()
-    }
-    
-    @objc private func quickLinkTapped(_ sender: UIButton) {
-        let menuItem = MenuItem.quickLinks()[sender.tag]
-        
-        if let urlString = menuItem.url, let url = URL(string: urlString) {
-            UIApplication.shared.open(url)
+        if let navigationBar = navigationController?.navigationBar {
+            dropdownMenuView.toggle(below: navigationBar)
         }
     }
     
@@ -317,5 +327,31 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.didSelectNews(at: indexPath.row)
+    }
+}
+
+// MARK: - DropdownMenuDelegate
+extension HomeViewController: DropdownMenuDelegate {
+    func didSelectMenuItem(_ item: MenuItem) {
+        // Закрываем меню
+        if let navigationBar = navigationController?.navigationBar {
+            dropdownMenuView.toggle(below: navigationBar)
+        }
+        
+        // Навигация
+        if let router = router {
+            if router.canNavigate(to: item) {
+                router.navigate(to: item)
+            } else {
+                router.handleUnavailableItem(item)
+            }
+        }
+    }
+    
+    func didTapOutsideMenu() {
+        // Закрываем меню при клике вне его
+        if let navigationBar = navigationController?.navigationBar {
+            dropdownMenuView.toggle(below: navigationBar)
+        }
     }
 }
