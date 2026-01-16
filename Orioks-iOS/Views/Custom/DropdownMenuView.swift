@@ -21,6 +21,16 @@ final class DropdownMenuView: UIView {
     private var isExpanded = false
     private let menuHeight: CGFloat = 600 // Высота меню
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // Если меню закрыто - пропускаем все касания через себя
+        if !isExpanded {
+            return nil
+        }
+        
+        // Если меню открыто - обрабатываем касания
+        return super.hitTest(point, with: event)
+    }
+    
     // MARK: - UI Elements
     private let overlayView: UIView = {
         let view = UIView()
@@ -174,10 +184,10 @@ final class DropdownMenuView: UIView {
         isExpanded.toggle()
         
         let navigationBarHeight = navigationBar.frame.maxY
+        let safeAreaTop = window?.safeAreaInsets.top ?? 0
         
         if isExpanded {
-            // Показываем меню
-            menuTopConstraint.constant = navigationBarHeight
+            menuTopConstraint.constant = max(navigationBarHeight, safeAreaTop)
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
                 self.overlayView.alpha = 1

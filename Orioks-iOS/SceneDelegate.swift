@@ -21,8 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = UIViewController()
         let loginViewController = LoginViewController()
         let homeViewController = HomeViewController()
+        let scheduleViewController = ScheduleViewController()
+        let gradesViewController = GradesViewController()
         viewController.view.backgroundColor = .systemBlue
-        let navigationController = UINavigationController(rootViewController: homeViewController)
+        let navigationController = UINavigationController(rootViewController: gradesViewController)
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
